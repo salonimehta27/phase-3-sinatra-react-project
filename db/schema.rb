@@ -10,9 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_08_025800) do
+ActiveRecord::Schema.define(version: 2021_10_10_015753) do
+
+  create_table "actions", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "comedies", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "documentaries", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "horrors", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
 
   create_table "netflix_originals", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "romances", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "top_rateds", force: :cascade do |t|
+    t.string "poster_path"
+    t.string "backdrop_path"
+    t.string "overview"
+    t.string "original_name"
+    t.string "name"
+  end
+
+  create_table "trendings", force: :cascade do |t|
     t.string "poster_path"
     t.string "backdrop_path"
     t.string "overview"

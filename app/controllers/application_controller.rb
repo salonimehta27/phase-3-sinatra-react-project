@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/netflix_originals" do
-    { message: "Good luck with your project!" }.to_json
+    NetflixOriginal.all.to_json
   end
 
 end
