@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "comedies", force: :cascade do |t|
@@ -26,6 +28,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "documentaries", force: :cascade do |t|
@@ -34,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "horrors", force: :cascade do |t|
@@ -42,6 +48,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "netflix_originals", force: :cascade do |t|
@@ -49,6 +57,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "backdrop_path"
     t.string "overview"
     t.string "original_name"
+    t.string "original_title"
+    t.string "title"
     t.string "name"
   end
 
@@ -58,6 +68,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "top_rateds", force: :cascade do |t|
@@ -66,6 +78,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
   create_table "trendings", force: :cascade do |t|
@@ -74,6 +88,8 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "overview"
     t.string "original_name"
     t.string "name"
+    t.string "original_title"
+    t.string "title"
   end
 
 end

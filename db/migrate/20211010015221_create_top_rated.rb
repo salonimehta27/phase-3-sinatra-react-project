@@ -6,6 +6,8 @@ class CreateTopRated < ActiveRecord::Migration[6.1]
       t.string :overview
       t.string :original_name
       t.string :name
+      t.string :original_title
+      t.string :title
     end
   end
 end

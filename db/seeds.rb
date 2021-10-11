@@ -72,7 +72,9 @@ requests.each do |key,value|
         backdrop_path:mov["backdrop_path"],
         overview:mov["overview"],
         original_name:mov["original_name"],
-        name:mov["name"]
+        name:mov["name"],
+        original_title:mov["original_title"],
+        title:mov["title"]
         )
         end
     end
