@@ -81,7 +81,7 @@ requests.each do |key,value|
  end
 end
 # so far this method is working but for most tables the the original names and names not working fix that 
-binding.pry
+# binding.pry
 
 # response_netflix_originals=RestClient.get "#{baseURL}#{requests[:fetchNetflixOriginals]}"
 # netflix_originals_hash=JSON.parse(response_netflix_originals)
