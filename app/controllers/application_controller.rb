@@ -10,6 +10,10 @@ class ApplicationController < Sinatra::Base
     movie.to_json
   end
 
+  get "/netflix_original_comments" do
+    NetflixOriginalsComment.all.to_json
+  end
+
   get "/trending" do
     Trending.all.to_json
   end

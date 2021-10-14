@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_10_015753) do
+ActiveRecord::Schema.define(version: 2021_10_14_005721) do
+
+  create_table "action_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "action_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "actions", force: :cascade do |t|
     t.string "poster_path"
@@ -32,6 +39,13 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "title"
   end
 
+  create_table "comedy_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "comedy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "documentaries", force: :cascade do |t|
     t.string "poster_path"
     t.string "backdrop_path"
@@ -40,6 +54,20 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "name"
     t.string "original_title"
     t.string "title"
+  end
+
+  create_table "documentary_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "documentary_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "horror_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "horror_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "horrors", force: :cascade do |t|
@@ -62,6 +90,20 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "name"
   end
 
+  create_table "netflix_originals_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "netflix_original_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "romance_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "romance_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "romances", force: :cascade do |t|
     t.string "poster_path"
     t.string "backdrop_path"
@@ -72,6 +114,13 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "title"
   end
 
+  create_table "top_rated_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "top_rated_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "top_rateds", force: :cascade do |t|
     t.string "poster_path"
     t.string "backdrop_path"
@@ -80,6 +129,13 @@ ActiveRecord::Schema.define(version: 2021_10_10_015753) do
     t.string "name"
     t.string "original_title"
     t.string "title"
+  end
+
+  create_table "trending_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "trending_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trendings", force: :cascade do |t|
