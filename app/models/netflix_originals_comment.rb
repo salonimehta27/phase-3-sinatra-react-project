@@ -1,3 +1,6 @@
-class NetflixOriginalsComment <ActiveRecord::Base 
+require 'pry'
+
+class NetflixOriginalsComment < ActiveRecord::Base 
 belongs_to :netflix_original
+
 end
