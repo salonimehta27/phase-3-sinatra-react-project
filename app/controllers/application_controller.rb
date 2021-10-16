@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
     
     NetflixOriginalsComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       netflix_original_id: params[:mov_id]
     ).to_json
     # binding.pry
@@ -25,7 +26,17 @@ class ApplicationController < Sinatra::Base
 
   
   get "/netflix_originals_comments/:id" do
+    # binding.pry
     movie = NetflixOriginalsComment.find(params[:id])
+    movie.to_json
+  end
+
+  patch "/netflix_originals_comments/:id" do
+    # binding.pry
+    movie = NetflixOriginalsComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
 
@@ -45,6 +56,7 @@ class ApplicationController < Sinatra::Base
     
     TrendingComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       trending_id: params[:mov_id]
     ).to_json
     # binding.pry
@@ -52,6 +64,13 @@ class ApplicationController < Sinatra::Base
 
   get "/trending_comments/:id" do
     movie = TrendingComment.find(params[:id])
+    movie.to_json
+  end
+  patch "/trending_comments/:id" do
+    movie = TrendingComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
 
@@ -70,6 +89,7 @@ class ApplicationController < Sinatra::Base
     
     TopRatedComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       top_rated_id: params[:mov_id]
     ).to_json
     # binding.pry
@@ -79,6 +99,15 @@ class ApplicationController < Sinatra::Base
     movie = TopRatedComment.find(params[:id])
     movie.to_json
   end
+
+  patch "/top_rated_comments/:id" do
+    movie = TopRatedComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
+    movie.to_json
+  end
+
 
   get "/action" do 
     Action.all.to_json
@@ -97,13 +126,21 @@ class ApplicationController < Sinatra::Base
     
     ActionComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       action_id: params[:mov_id]
     ).to_json
     # binding.pry
   end
 
-  get "/action_comments/:id" do
+  # get "/action_comments/:id" do
+  #   movie = ActionComment.find(params[:id])
+  #   movie.to_json
+  # end
+  patch "/action_comments/:id" do
     movie = ActionComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
 
@@ -121,14 +158,23 @@ class ApplicationController < Sinatra::Base
     
     ComedyComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       comedy_id: params[:mov_id]
     ).to_json
     # binding.pry
   end
 
-  get "/comedy_comments/:id" do
+  # get "/comedy_comments/:id" do
+  #   movie = ComedyComment.find(params[:id])
+  #   movie.to_json
+  # end
+
+  patch "/comedy_comments/:id" do
     movie = ComedyComment.find(params[:id])
-    movie
+    movie.update(
+      likes:params[:likes]
+    )
+    movie.to_json
   end
 
   get "/horror" do
@@ -147,14 +193,24 @@ class ApplicationController < Sinatra::Base
     
     HorrorComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       horror_id: params[:mov_id]
     ).to_json
     # binding.pry
   end
-  get "/horror_comments/:id" do
+  # get "/horror_comments/:id" do
+  #   movie = HorrorComment.find(params[:id])
+  #   movie.to_json
+  # end
+
+  patch "/horror_comments/:id" do
     movie = HorrorComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
+
   get "/romance" do
     Romance.all.to_json
   end
@@ -166,16 +222,25 @@ class ApplicationController < Sinatra::Base
   get "/romance_comments" do
     RomanceComment.all.to_json
   end
+
   post "romance_comments" do
     
     RomanceComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       romance_id: params[:mov_id]
     ).to_json
     # binding.pry
   end
-  get "/romance_comments/:id" do
+  # get "/romance_comments/:id" do
+  #   movie = RomanceComment.find(params[:id])
+  #   movie.to_json
+  # end
+  patch "/romance_comments/:id" do
     movie = RomanceComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
 
@@ -193,12 +258,22 @@ class ApplicationController < Sinatra::Base
     
     DocumentaryComment.create(
       comment: params[:comment],
+      likes:params[:likes],
       documentary_id: params[:mov_id]
     ).to_json
     # binding.pry
   end
-  get "/documentary_comments/:id" do
+
+  # get "/documentary_comments/:id" do
+  #   movie = DocumentaryComment.find(params[:id])
+  #   movie.to_json
+  # end
+
+  patch "/documentary_comments/:id" do
     movie = DocumentaryComment.find(params[:id])
+    movie.update(
+      likes:params[:likes]
+    )
     movie.to_json
   end
 

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "action_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "action_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "comedy_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "comedy_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "documentary_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "documentary_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -65,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "horror_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "horror_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -92,6 +96,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "netflix_originals_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "netflix_original_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -99,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "romance_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "romance_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -116,6 +122,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "top_rated_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "top_rated_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -133,6 +140,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
 
   create_table "trending_comments", force: :cascade do |t|
     t.string "comment"
+    t.integer "likes"
     t.integer "trending_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
