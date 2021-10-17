@@ -10,13 +10,13 @@ class ApplicationController < Sinatra::Base
     movie = NetflixOriginal.find(params[:id])
     movie.to_json
   end
-  get "/netflix_originals_comments" do
-    NetflixOriginalsComment.all.to_json
+  get "/netflix_original_comments" do
+    NetflixOriginalComment.all.to_json
   end
 
-  post "/netflix_originals_comments" do
+  post "/netflix_original_comments" do
     
-    NetflixOriginalsComment.create(
+    NetflixOriginalComment.create(
       comment: params[:comment],
       likes:params[:likes],
       netflix_original_id: params[:mov_id]
@@ -25,15 +25,15 @@ class ApplicationController < Sinatra::Base
   end
 
   
-  get "/netflix_originals_comments/:id" do
+  get "/netflix_original_comments/:id" do
     # binding.pry
-    movie = NetflixOriginalsComment.find(params[:id])
+    movie = NetflixOriginalComment.find(params[:id])
     movie.to_json
   end
 
-  patch "/netflix_originals_comments/:id" do
+  patch "/netflix_original_comments/:id" do
     # binding.pry
-    movie = NetflixOriginalsComment.find(params[:id])
+    movie = NetflixOriginalComment.find(params[:id])
     movie.update(
       likes:params[:likes]
     )

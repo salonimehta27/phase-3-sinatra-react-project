@@ -84,6 +84,14 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
     t.string "title"
   end
 
+  create_table "netflix_original_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "likes"
+    t.integer "netflix_original_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "netflix_originals", force: :cascade do |t|
     t.string "poster_path"
     t.string "backdrop_path"
@@ -92,14 +100,6 @@ ActiveRecord::Schema.define(version: 2021_10_14_005721) do
     t.string "original_title"
     t.string "title"
     t.string "name"
-  end
-
-  create_table "netflix_originals_comments", force: :cascade do |t|
-    t.string "comment"
-    t.integer "likes"
-    t.integer "netflix_original_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "romance_comments", force: :cascade do |t|
